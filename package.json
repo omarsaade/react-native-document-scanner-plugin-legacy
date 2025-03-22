@@ -44,9 +44,9 @@
   "author": "YOUR NAME <your.email@example.com> (forked from David Marcus <david@websitebeaver.com>)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/YOUR_USERNAME/react-native-document-scanner-plugin-legacy/issues"
+    "url": "git+https://github.com/omarsaade/react-native-document-scanner-plugin-legacy.git"
   },
-  "homepage": "https://github.com/YOUR_USERNAME/react-native-document-scanner-plugin-legacy#readme",
+  "homepage": "https://github.com/omarsaade/react-native-document-scanner-plugin-legacy#readme",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
