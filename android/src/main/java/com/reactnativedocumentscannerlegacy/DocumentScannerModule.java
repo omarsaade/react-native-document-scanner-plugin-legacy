@@ -61,7 +61,7 @@ public class DocumentScannerModule extends ReactContextBaseJavaModule {
         Activity currentActivity = getCurrentActivity();
         WritableMap response = new WritableNativeMap();
 
-        // create a document scanner
+        // create a document scanner //
         documentScanner = new DocumentScanner(
                 (ComponentActivity) currentActivity,
                 (ArrayList<String> documentScanResults) -> {

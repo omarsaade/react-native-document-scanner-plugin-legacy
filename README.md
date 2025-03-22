@@ -9,7 +9,7 @@ apps that let users scan notes, homework, business cards, receipts, or anything 
 | -------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
 | ![Dollar-iOS](https://user-images.githubusercontent.com/26162804/160485984-e6c46563-56ee-4be9-b241-34a186e0029d.gif) | ![Dollar Android](https://user-images.githubusercontent.com/26162804/160306955-af9c5dd6-5cdf-4e2c-8770-c734a594985d.gif) |
 
-## Install
+### Install
 
 ```bash
 npm install react-native-document-scanner-plugin

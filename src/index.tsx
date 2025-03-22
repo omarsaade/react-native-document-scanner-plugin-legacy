@@ -34,7 +34,7 @@ export interface ScanDocumentOptions {
    * @default: 100
    */
   croppedImageQuality?: number;
-  
+
   /**
    * Android only: If true then once the user takes a photo, they get to preview the automatically
    * detected document corners. They can then move the corners in case there needs to
@@ -71,7 +71,9 @@ export enum ResponseType {
 }
 
 export interface ScanDocumentResponse {
+  //
   /**
+   * //
    * This is an array with either file paths or base64 images for the
    * document scan.
    */
