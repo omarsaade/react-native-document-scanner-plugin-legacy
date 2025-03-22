@@ -132,8 +132,7 @@
     }
   },
   "eslintIgnore": [
-    "node_modules/",
-    "lib/"
+    "node_modules/"
   ],
   "prettier": {
     "quoteProps": "consistent",
