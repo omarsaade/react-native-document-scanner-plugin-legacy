@@ -1,7 +1,7 @@
 {
-  "name": "react-native-document-scanner-plugin",
+  "name": "react-native-document-scanner-plugin-legacy",
   "version": "0.9.1",
-  "description": "A React Native plugin that lets you scan documents using Android and iOS",
+  "description": "Legacy v0.9.1 fork of the React Native plugin for document scanning",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
   "types": "lib/typescript/index.d.ts",
@@ -13,7 +13,7 @@
     "android",
     "ios",
     "cpp",
-    "react-native-document-scanner-plugin.podspec",
+    "react-native-document-scanner-plugin-legacy.podspec",
     "expo-plugin",
     "app.plugin.js",
     "!lib/typescript/example",
@@ -37,15 +37,17 @@
   "keywords": [
     "react-native",
     "ios",
-    "android"
+    "android",
+    "document-scanner",
+    "legacy"
   ],
-  "repository": "https://github.com/websitebeaver/react-native-document-scanner-plugin",
-  "author": "David Marcus <david@websitebeaver.com> (https://github.com/websitebeaver)",
+  "repository": "https://github.com/YOUR_USERNAME/react-native-document-scanner-plugin-legacy",
+  "author": "YOUR NAME <your.email@example.com> (forked from David Marcus <david@websitebeaver.com>)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/websitebeaver/react-native-document-scanner-plugin/issues"
+    "url": "https://github.com/YOUR_USERNAME/react-native-document-scanner-plugin-legacy/issues"
   },
-  "homepage": "https://github.com/websitebeaver/react-native-document-scanner-plugin#readme",
+  "homepage": "https://github.com/YOUR_USERNAME/react-native-document-scanner-plugin-legacy#readme",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },

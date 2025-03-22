@@ -1,0 +1,2 @@
+# From your project root
+curl -o android/gradlew https://raw.githubusercontent.com/gradle/gradle/master/wrapper/gradlew

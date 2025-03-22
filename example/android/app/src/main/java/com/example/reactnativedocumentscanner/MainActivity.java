@@ -1,4 +1,4 @@
-package com.example.reactnativedocumentscanner;
+package com.example.reactnativedocumentscannerlegacy;
 
 import com.facebook.react.ReactActivity;
 

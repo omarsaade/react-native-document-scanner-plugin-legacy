@@ -53,7 +53,7 @@ yarn test
 
 To edit the Objective-C files, open `example/ios/DocumentScannerExample.xcworkspace` in XCode and find the source files at `Pods > Development Pods > react-native-document-scanner-plugin`.
 
-To edit the Kotlin files, open `example/android` in Android studio and find the source files at `reactnativedocumentscanner` under `Android`.
+To edit the Kotlin files, open `example/android` in Android studio and find the source files at `reactnativedocumentscannerlegacy` under `Android`.
 
 ### Commit message convention
 

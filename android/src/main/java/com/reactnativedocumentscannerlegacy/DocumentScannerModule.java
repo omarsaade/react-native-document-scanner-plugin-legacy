@@ -1,4 +1,4 @@
-package com.reactnativedocumentscanner;
+package com.reactnativedocumentscannerlegacy;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -23,7 +23,7 @@ import java.util.ArrayList;
 
 @ReactModule(name = DocumentScannerModule.NAME)
 public class DocumentScannerModule extends ReactContextBaseJavaModule {
-    public static final String NAME = "DocumentScanner";
+    public static final String NAME = "DocumentScannerLegacy";
 
     private static final int DOCUMENT_SCAN_REQUEST = 938;
 

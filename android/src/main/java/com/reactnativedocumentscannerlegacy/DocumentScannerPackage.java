@@ -1,4 +1,4 @@
-package com.reactnativedocumentscanner;
+package com.reactnativedocumentscannerlegacy;
 
 import androidx.annotation.NonNull;
 

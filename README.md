@@ -26,6 +26,7 @@ After installing the plugin, you need to follow the steps below
 - `NSCameraUsageDescription` (`Privacy - Camera Usage Description`)
 
 3. Install pods by running
+
 ```bash
 cd ios && pod install && cd ..
 ```
@@ -38,34 +39,34 @@ cd ios && pod install && cd ..
 
 ## Examples
 
-* [Basic Example](#basic-example)
-* [Limit Number of Scans](#limit-number-of-scans)
-* [Remove Cropper](#remove-cropper)
+- [Basic Example](#basic-example)
+- [Limit Number of Scans](#limit-number-of-scans)
+- [Remove Cropper](#remove-cropper)
 
 ### Basic Example
 
 ```javascript
-import React, { useState, useEffect } from 'react'
-import { Image } from 'react-native'
-import DocumentScanner from 'react-native-document-scanner-plugin'
+import React, { useState, useEffect } from 'react';
+import { Image } from 'react-native';
+import DocumentScanner from 'react-native-document-scanner-plugin';
 
 export default () => {
   const [scannedImage, setScannedImage] = useState();
 
   const scanDocument = async () => {
     // start the document scanner
-    const { scannedImages } = await DocumentScanner.scanDocument()
-  
+    const { scannedImages } = await DocumentScanner.scanDocument();
+
     // get back an array with scanned image file paths
     if (scannedImages.length > 0) {
       // set the img src, so we can view the first scanned image
-      setScannedImage(scannedImages[0])
+      setScannedImage(scannedImages[0]);
     }
-  }
+  };
 
   useEffect(() => {
     // call scanDocument on load
-    scanDocument()
+    scanDocument();
   }, []);
 
   return (
@@ -74,8 +75,8 @@ export default () => {
       style={{ width: '100%', height: '100%' }}
       source={{ uri: scannedImage }}
     />
-  )
-}
+  );
+};
 ```
 
 Here's what this example looks like with several items
@@ -102,14 +103,14 @@ Here's what this example looks like with several items
 
 ### Limit Number of Scans
 
-You can limit the number of scans. For example if your app lets a user scan a business 
+You can limit the number of scans. For example if your app lets a user scan a business
 card you might want them to only capture the front and back. In this case you can set
 maxNumDocuments to 2. This only works on Android.
 
 ```javascript
-import React, { useState, useEffect } from 'react'
-import { Image } from 'react-native'
-import DocumentScanner from 'react-native-document-scanner-plugin'
+import React, { useState, useEffect } from 'react';
+import { Image } from 'react-native';
+import DocumentScanner from 'react-native-document-scanner-plugin';
 
 export default () => {
   const [scannedImage, setScannedImage] = useState();
@@ -117,19 +118,19 @@ export default () => {
   const scanDocument = async () => {
     // start the document scanner
     const { scannedImages } = await DocumentScanner.scanDocument({
-      maxNumDocuments: 2
-    })
-  
+      maxNumDocuments: 2,
+    });
+
     // get back an array with scanned image file paths
     if (scannedImages.length > 0) {
       // set the img src, so we can view the first scanned image
-      setScannedImage(scannedImages[0])
+      setScannedImage(scannedImages[0]);
     }
-  }
+  };
 
   useEffect(() => {
     // call scanDocument on load
-    scanDocument()
+    scanDocument();
   }, []);
 
   return (
@@ -138,22 +139,22 @@ export default () => {
       style={{ width: '100%', height: '100%' }}
       source={{ uri: scannedImage }}
     />
-  )
-}
+  );
+};
 ```
 
 <video src="https://user-images.githubusercontent.com/26162804/161643345-6fe15f33-9414-46f5-b5d5-24d88948e801.mp4" data-canonical-src="https://user-images.githubusercontent.com/26162804/161643345-6fe15f33-9414-46f5-b5d5-24d88948e801.mp4" controls="controls" muted="muted" class="d-block rounded-bottom-2 border-top width-fit" style="max-height:640px;"></video>
 
 ### Remove Cropper
 
-You can automatically accept the detected document corners, and prevent the user from 
+You can automatically accept the detected document corners, and prevent the user from
 making adjustments. Set letUserAdjustCrop to false to skip the crop screen. This limits
 the max number of scans to 1. This only works on Android.
 
 ```javascript
-import React, { useState, useEffect } from 'react'
-import { Image } from 'react-native'
-import DocumentScanner from 'react-native-document-scanner-plugin'
+import React, { useState, useEffect } from 'react';
+import { Image } from 'react-native';
+import DocumentScanner from 'react-native-document-scanner-plugin';
 
 export default () => {
   const [scannedImage, setScannedImage] = useState();
@@ -161,19 +162,19 @@ export default () => {
   const scanDocument = async () => {
     // start the document scanner
     const { scannedImages } = await DocumentScanner.scanDocument({
-      letUserAdjustCrop: false
-    })
-  
+      letUserAdjustCrop: false,
+    });
+
     // get back an array with scanned image file paths
     if (scannedImages.length > 0) {
       // set the img src, so we can view the first scanned image
-      setScannedImage(scannedImages[0])
+      setScannedImage(scannedImages[0]);
     }
-  }
+  };
 
   useEffect(() => {
     // call scanDocument on load
-    scanDocument()
+    scanDocument();
   }, []);
 
   return (
@@ -182,17 +183,17 @@ export default () => {
       style={{ width: '100%', height: '100%' }}
       source={{ uri: scannedImage }}
     />
-  )
-}
+  );
+};
 ```
 
 <video src="https://user-images.githubusercontent.com/26162804/161643377-cabd7f51-a16f-4f5e-938a-afb6f3b1c8cb.mp4" data-canonical-src="https://user-images.githubusercontent.com/26162804/161643377-cabd7f51-a16f-4f5e-938a-afb6f3b1c8cb.mp4" controls="controls" muted="muted" class="d-block rounded-bottom-2 border-top width-fit" style="max-height:640px;"></video>
 
 ## Documentation
 
-* [`scanDocument(...)`](#scandocument)
-* [Interfaces](#interfaces)
-* [Enums](#enums)
+- [`scanDocument(...)`](#scandocument)
+- [Interfaces](#interfaces)
+- [Enums](#enums)
 
 ### scanDocument(...)
 
@@ -208,11 +209,9 @@ Opens the camera, and starts the document scan
 
 **Returns:** <code>Promise&lt;<a href="#scandocumentresponse">ScanDocumentResponse</a>&gt;</code>
 
---------------------
-
+---
 
 ### Interfaces
-
 
 #### ScanDocumentResponse
 
@@ -221,19 +220,16 @@ Opens the camera, and starts the document scan
 | **`scannedImages`** | <code>string[]</code>                                                             | This is an array with either file paths or base64 images for the document scan.                                                   |
 | **`status`**        | <code><a href="#scandocumentresponsestatus">ScanDocumentResponseStatus</a></code> | The status lets you know if the document scan completes successfully, or if the user cancels before completing the document scan. |
 
-
 #### ScanDocumentOptions
 
-| Prop                    | Type                                                  | Description                                                                                                                                                                                                                                                                                                                               | Default                                   |
-| ----------------------- | ----------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------- |
-| **`croppedImageQuality`**   | <code>number</code>                                   | The quality of the cropped image from 0 - 100. 100 is the best quality.                                                                                                                                                                                                                                                | <code>: 100</code>                         |
-| **`letUserAdjustCrop`** | <code>boolean</code>                                  | Android only: If true then once the user takes a photo, they get to preview the automatically detected document corners. They can then move the corners in case there needs to be an adjustment. If false then the user can't adjust the corners, and the user can only take 1 photo (maxNumDocuments can't be more than 1 in this case). | <code>: true</code>                       |
-| **`maxNumDocuments`**   | <code>number</code>                                   | Android only: The maximum number of photos an user can take (not counting photo retakes)                                                                                                                                                                                                                                                  | <code>: 24</code>                         |
-| **`responseType`**      | <code><a href="#responsetype">ResponseType</a></code> | The response comes back in this format on success. It can be the document scan image file paths or base64 images.                                                                                                                                                                                                                         | <code>: ResponseType.ImageFilePath</code> |
-
+| Prop                      | Type                                                  | Description                                                                                                                                                                                                                                                                                                                               | Default                                   |
+| ------------------------- | ----------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------- |
+| **`croppedImageQuality`** | <code>number</code>                                   | The quality of the cropped image from 0 - 100. 100 is the best quality.                                                                                                                                                                                                                                                                   | <code>: 100</code>                        |
+| **`letUserAdjustCrop`**   | <code>boolean</code>                                  | Android only: If true then once the user takes a photo, they get to preview the automatically detected document corners. They can then move the corners in case there needs to be an adjustment. If false then the user can't adjust the corners, and the user can only take 1 photo (maxNumDocuments can't be more than 1 in this case). | <code>: true</code>                       |
+| **`maxNumDocuments`**     | <code>number</code>                                   | Android only: The maximum number of photos an user can take (not counting photo retakes)                                                                                                                                                                                                                                                  | <code>: 24</code>                         |
+| **`responseType`**        | <code><a href="#responsetype">ResponseType</a></code> | The response comes back in this format on success. It can be the document scan image file paths or base64 images.                                                                                                                                                                                                                         | <code>: ResponseType.ImageFilePath</code> |
 
 ### Enums
-
 
 #### ScanDocumentResponseStatus
 
@@ -241,7 +237,6 @@ Opens the camera, and starts the document scan
 | ------------- | ---------------------- | --------------------------------------------------------------------------------------------------------- |
 | **`Success`** | <code>'success'</code> | The status comes back as success if the document scan completes successfully.                             |
 | **`Cancel`**  | <code>'cancel'</code>  | The status comes back as cancel if the user closes out of the camera before completing the document scan. |
-
 
 #### ResponseType
 
@@ -277,14 +272,16 @@ Add `react-native-document-scanner-plugin` to plugins in `app.json` or `app.conf
 ```bash
 npx expo prebuild
 ```
+
 or
+
 ```bash
 eas build
 ```
 
 ## Common Mistakes
 
-* [Android Camera Permissions](#android-camera-permissions)
+- [Android Camera Permissions](#android-camera-permissions)
 
 ### Android Camera Permissions
 
@@ -296,35 +293,41 @@ In that case if you don't request camera permissions you get this error
 Here's an example of how to request camera permissions.
 
 ```javascript
-import React, { useState, useEffect } from 'react'
-import { Platform, PermissionsAndroid, Image, Alert } from 'react-native'
-import DocumentScanner from 'react-native-document-scanner-plugin'
+import React, { useState, useEffect } from 'react';
+import { Platform, PermissionsAndroid, Image, Alert } from 'react-native';
+import DocumentScanner from 'react-native-document-scanner-plugin';
 
 export default () => {
   const [scannedImage, setScannedImage] = useState();
 
   const scanDocument = async () => {
     // prompt user to accept camera permission request if they haven't already
-    if (Platform.OS === 'android' && await PermissionsAndroid.request(
-      PermissionsAndroid.PERMISSIONS.CAMERA
-    ) !== PermissionsAndroid.RESULTS.GRANTED) {
-      Alert.alert('Error', 'User must grant camera permissions to use document scanner.')
-      return
+    if (
+      Platform.OS === 'android' &&
+      (await PermissionsAndroid.request(
+        PermissionsAndroid.PERMISSIONS.CAMERA
+      )) !== PermissionsAndroid.RESULTS.GRANTED
+    ) {
+      Alert.alert(
+        'Error',
+        'User must grant camera permissions to use document scanner.'
+      );
+      return;
     }
 
     // start the document scanner
-    const { scannedImages } = await DocumentScanner.scanDocument()
-  
+    const { scannedImages } = await DocumentScanner.scanDocument();
+
     // get back an array with scanned image file paths
     if (scannedImages.length > 0) {
       // set the img src, so we can view the first scanned image
-      setScannedImage(scannedImages[0])
+      setScannedImage(scannedImages[0]);
     }
-  }
+  };
 
   useEffect(() => {
     // call scanDocument on load
-    scanDocument()
+    scanDocument();
   }, []);
 
   return (
@@ -333,8 +336,8 @@ export default () => {
       style={{ width: '100%', height: '100%' }}
       source={{ uri: scannedImage }}
     />
-  )
-}
+  );
+};
 ```
 
 ## License
@@ -346,4 +349,5 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-# react-native-document-scanner-plugin-legacy-
+
+# react-native-document-scanner-plugin-legacy
